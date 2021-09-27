@@ -30,7 +30,7 @@ def window_demo1():
 
     parzen_win = WindowGenerator.parzen(length)
     ww, parzen_win_f = scipy.signal.freqz(parzen_win)
-    plot.stem(parzen_win, title='Hanning Window')
+    plot.stem(parzen_win, title='Parzen Window')
     plot.mag_phase(parzen_win_f, xaxis=ww/np.pi)
 
   
