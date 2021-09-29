@@ -36,7 +36,7 @@ def lpf_demo1():
     filt = build_raised_cosine(32, upsample_factor=4, rolloff_factor=0.0)
 
     ww, hh = scipy.signal.freqz(filt)
-    plot.mag_phase(hh, xaxis=ww/np.pi)
+    plot.mag_phase(hh, title='Sinc', xaxis=ww/np.pi)
 
     hann_win = WindowGenerator.hann(32)
     ww, hann_win_f = scipy.signal.freqz(hann_win)
@@ -44,7 +44,7 @@ def lpf_demo1():
     filt2 = filt*hann_win
     ww, hh = scipy.signal.freqz(filt2)
     plot.stem(filt2, title='Sinc Filter With Hanning Window')
-    plot.mag_phase(hh, xaxis=ww/np.pi)
+    plot.mag_phase(hh, title='Sinc with Hanning Window', xaxis=ww/np.pi)
 
     sig = signal_generator.sinusoid(128, 0.4*np.pi)
     plot.stem(filt, title='Low Pass Filter')

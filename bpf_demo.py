@@ -48,7 +48,7 @@ def bpf_demo1():
 
     sig = signal_generator.sinusoid(128, 0.4*np.pi)
     output1 = np.convolve(filt, sig, mode='full') # mode can be 'full', 'same', 'valid'
-    plot.stem(output1, title='Output Signal')
+    #plot.stem(output1, title='Output Signal')
     a = input()
     return
 

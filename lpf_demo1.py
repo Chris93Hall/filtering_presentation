@@ -39,7 +39,7 @@ def lpf_demo1():
     output = np.convolve(filt, sig, mode='full') # mode can be 'full', 'same', 'valid'
     plot.stem(output, title='Output Signal')
     ww, hh = scipy.signal.freqz(filt)
-    plot.mag_phase(hh, xaxis=ww/np.pi)
+    plot.mag_phase(hh, title='Magnitude and Phase of Transfer Function', xaxis=ww/np.pi)
     a = input()
     return
 
